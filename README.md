@@ -1,65 +1,36 @@
-# Pokédex Angular — Despliegue en Microsoft Azure
+# Pokédex Angular
 
-## Descripción
-Aplicación web Pokédex desarrollada en Angular, desplegada en la nube pública de Microsoft Azure utilizando Azure Web Apps como servicio de hosting.
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+[![codecov](https://codecov.io/gh/keilermora/pokedex-angular/branch/master/graph/badge.svg?token=9E0D28IOFT)](https://codecov.io/gh/keilermora/pokedex-angular)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
----
+[https://keilermora.github.io/pokedex-angular/](https://keilermora.github.io/pokedex-angular/)
 
-## ☁️ Creación de Cuenta en Azure for Students
+La aplicación muestra el listado y el detalle de los Pokémon de las primeras 3 generaciones.
 
-### Requisitos previos
-- Correo institucional universitario activo
-- Acceso a internet
+La imagen que representa un Pokémon en el listado muestra las variaciones que estos tuvieron durante las primeras versiones, desde la versión Green (1996) hasta la version Emerald (2005).
 
-### Paso 1: Registro en Azure for Students
-1. Ingresa a [Azure for Students](https://azure.microsoft.com/es-es/free/students/)
-2. Haz clic en **"Empezar gratis"**
-3. Inicia sesión con tu **correo institucional** (ej: usuario@universidad.edu.co)
-4. Acepta los términos y condiciones de Microsoft
-5. Completa la verificación de estudiante
+Los detalles de un Pokémon individual muestra sus estadísticas base y los registros de la Pokédex de las diferentes versiones.
 
-### Paso 2: Activación de la suscripción
-1. Una vez verificado, Azure asigna automáticamente:
-   - **$100 USD** en créditos gratuitos
-   - Acceso a servicios gratuitos por 12 meses
-   - Servicios siempre gratuitos incluidos
-2. Recibirás un correo de confirmación de Microsoft
+El proyecto fue desarrollado usando la librería de JavaScript [Angular](https://angular.io/) para crear la interfaz de usuario, en comunicación con la Api RESTful [PokéAPI](https://pokeapi.co/).
 
-### Paso 3: Acceso al Portal
-1. Ve a [https://portal.azure.com](https://portal.azure.com)
-2. Inicia sesión con tu cuenta institucional
-3. Verifica que la suscripción **"Azure for Students"** aparezca activa en el panel principal
+## Requisitos mínimos
 
-### Paso 4: Renovación de créditos (si es necesario)
-1. Ingresa a [Azure for Students Starter](https://azure.microsoft.com/es-es/free/students/)
-2. Haz clic en **"Activar"**
-3. Inicia sesión nuevamente con tu correo institucional
-4. Sigue el proceso de renovación
+- [Nodejs](https://nodejs.org) con soporte de largo plazo (LTS).
+- Un navegador web
 
----
+## Ambiente de pruebas
 
-## 🏗️ Arquitectura Utilizada
+Ejecutar en la raíz del proyecto:
 
 ```
-Internet → HTTPS → Azure Web App (app-listrace-web-prod)
-                        ↓
-              App Service Plan (Free F1)
-                        ↓
-              Resource Group (rg-listrace-prod)
-                        ↓
-              Azure Subscription for Students
+npm start
 ```
 
-### Servicios de Azure usados
-| Servicio | Nombre | Plan |
-|---|---|---|
-| Resource Group | rg-listrace-prod | - |
-| App Service Plan | ASP-rglistraceprod | Free F1 |
-| Web App | app-listrace-web-prod | Free |
+## Referencias
 
----
-
-## 🔗 URL de la aplicación
-```
-https://app-listrace-web-prod-[raab-g8cmbmdeg0b7a5aw.mexicocentral-01].azurewebsites.net
-```
+- [Angular](https://angular.io/): One framework.
+- [Angular Folder Structure](https://angular-folder-structure.readthedocs.io/en/latest/): Create a skeleton structure which is flexible for projects big or small.
+- [Font Awesome](https://fontawesome.com/): The web's most popular icon set and toolkit.
+- [Normalize.css](https://necolas.github.io/normalize.css/): A modern, HTML5-ready alternative to CSS resets.
+- [PokéAPI](https://pokeapi.co/): The RESTful Pokémon API.
